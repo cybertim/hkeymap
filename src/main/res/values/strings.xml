@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HKeyMap</string>
+    
+    <string name="prefs_cat_app">General Settings</string>
+    <string name="prefs_loc">Keymap Location</string>
+    <string name="prefs_loc_s">location of the .kl file to change</string>
+    
+    <string name="menu_settings">Settings</string>
+    <string name="menu_reload">Reload</string>    
+    <string name="menu_save">Save</string>    
+    
+</resources>

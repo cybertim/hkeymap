@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory android:title="@string/prefs_cat_app" >
+        <EditTextPreference
+            android:title="@string/prefs_loc"
+            android:summary="@string/prefs_loc_s"
+            android:defaultValue="/system/usr/keylayout/sec_keypad.kl"
+            android:key="prefLoc"/>   
+    </PreferenceCategory>   
+
+</PreferenceScreen>

@@ -1,0 +1,6 @@
+/build/
+/.nb-gradle/private/
+/.gradle/
+/private/
+/my-release-key.keystore
+/credentials.properties

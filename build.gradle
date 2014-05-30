@@ -1,0 +1,49 @@
+buildscript {
+            
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.9.2'
+    }
+}
+
+apply plugin: 'android'
+
+android {
+    buildToolsVersion "19.0.3"
+    compileSdkVersion 19
+    
+    defaultConfig {
+        minSdkVersion 16
+        versionCode 1
+        versionName "1.0.0"
+    }    
+    lintOptions {
+        abortOnError false
+    }
+    signingConfigs {
+        release {
+            Properties props = new Properties() 
+            props.load(new FileInputStream("${project.rootDir}/credentials.properties"))
+            storeFile file("my-release-key.keystore")
+            storePassword props["apkPassword"]
+            keyAlias "alias_name"
+            keyPassword props["apkPassword"]
+        }
+        buildTypes {
+            release {
+                signingConfig signingConfigs.release
+            }
+        }    
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "joda-time:joda-time:2.3"
+}
